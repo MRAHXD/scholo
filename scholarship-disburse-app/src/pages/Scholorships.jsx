@@ -35,9 +35,9 @@ export default function Scholarships() {
     {
       id: 3,
       name: 'Prime Minister’s Scholarship Scheme for RPF/RPSF',
-      state: 'all states',  
+      state: 'National',  
       scholarshipType: 'Special Category',
-      applicationStatus: '(next cycle begins in April 2025)', 
+      applicationStatus: 'closed', 
       educationalLevel: 'Undergraduate/Postgraduate',
       description: 'Aimed at the wards of RPF/RPSF personnel to support higher education.',  
       Benefits: '₹2,250 per month for girls and ₹2,000 per month for boys and Covers tuition fees for professional courses like B.Tech, MBBS, MCA, etc.',
@@ -47,18 +47,19 @@ export default function Scholarships() {
   ];  
 
   const [stateFilter, setStateFilter] = useState("all");  
-  const [scholarshipTypeFilter, setScholarshipTypeFilter] = useState("");  
-  const [applicationStatusFilter, setApplicationStatusFilter] = useState("");  
-  const [educationalLevelFilter, setEducationalLevelFilter] = useState("");  
+  const [scholarshipTypeFilter, setScholarshipTypeFilter] = useState("all");  
+  const [applicationStatusFilter, setApplicationStatusFilter] = useState("all");  
+  const [educationalLevelFilter, setEducationalLevelFilter] = useState("all");  
   
   const filteredScholarships = scholarships.filter(scholarship => {  
     const matchesState = stateFilter === 'all' || scholarship.state === stateFilter;  
-    const matchesType = scholarship.scholarshipType === scholarshipTypeFilter || scholarshipTypeFilter === "";  
-    const matchesStatus = scholarship.applicationStatus === applicationStatusFilter || applicationStatusFilter === "";  
-    const matchesLevel = scholarship.educationalLevel === educationalLevelFilter || educationalLevelFilter === "";  
+    const matchesType = scholarshipTypeFilter === 'all' || scholarship.scholarshipType === scholarshipTypeFilter;  
+    const matchesStatus = applicationStatusFilter === 'all' || scholarship.applicationStatus === applicationStatusFilter;  
+    const matchesLevel = educationalLevelFilter === 'all' || scholarship.educationalLevel === educationalLevelFilter;  
   
     return matchesState && matchesType && matchesStatus && matchesLevel;  
-  });
+  });  
+  
   
 
   const wrapperStyle = {
@@ -85,36 +86,38 @@ export default function Scholarships() {
      height: 'fit-content'  
   };
 
-  const linkContainerStyle = {
-    display: 'inline-block',
-    marginTop: '0.5rem',
-    backgroundColor: '#007BFF',
-    color: '#FFF',
-    borderRadius: '8px',
-    padding: '8px'
-  };
+    const linkContainerStyle = {
+      display: 'inline-block',
+      marginTop: '0.5rem',
+      backgroundColor: '#007BFF',
+      color: '#FFF',
+      borderRadius: '8px',
+      padding: '8px'
+    };
 
   return (
     
-    <div style={wrapperStyle}>
-    <div style={filterStyle}>  
-   
-    <Link href="/" >
-    <div style={linkContainerStyle}>Home</div>
-    </Link>
+      <div style={wrapperStyle}>  
+        <div style={filterStyle}>  
+          <Link href="/" >  
+            <div style={linkContainerStyle}>Home</div>  
+          </Link>  
     
-      <Filters   
-         setStateFilter={setStateFilter}  
-         setScholarshipTypeFilter={setScholarshipTypeFilter}  
-         setApplicationStatusFilter={setApplicationStatusFilter}  
-         setEducationalLevelFilter={setEducationalLevelFilter}  
-      />  
-    </div>  
-    <div style={cardsStyle}>  
-      {filteredScholarships.map(scholarship => (  
-        <ScholarshipCard key={scholarship.id} scholarship={scholarship} />  
-      ))}  
-    </div>  
-  </div>  
-);      
-}
+          <Filters  
+            setStateFilter={setStateFilter}  
+            setScholarshipTypeFilter={setScholarshipTypeFilter}  
+            setApplicationStatusFilter={setApplicationStatusFilter}  
+            setEducationalLevelFilter={setEducationalLevelFilter}  
+          />  
+        </div>  
+    
+        <div style={cardsStyle}>  
+          {filteredScholarships.map(scholarship => (  
+            <ScholarshipCard key={scholarship.id} scholarship={scholarship} />  
+          ))}  
+        </div>  
+      </div>  
+    );  
+  };  
+     
+

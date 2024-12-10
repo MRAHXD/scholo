@@ -36,7 +36,7 @@ const ScholarshipCard = ({scholarship}) => {
     <p style={textStyle}>Benefits: {scholarship.Benefits}</p>  
     <p style={textStyle}>Eligibility: {scholarship.eligibility}</p>  
     <p style={textStyle}>Deadline: {scholarship.deadline}</p>  
-    <Link href={`/${scholarship.id}`} passHref>  
+    <Link href={`/${scholarship.id}`} passHref onClick={()=> alert("Apply functionality coming soon!")}>  
       <div style={linkContainerStyle}>Apply Now</div>  
     </Link>  
   </div>  

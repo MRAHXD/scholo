@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Scholarship Finder Platform 🎓
+Empowering Students, Bridging Opportunities
 
-## Getting Started
+Welcome to Scholo, a platform designed to make educational opportunities accessible to all students. With an intuitive user experience and powerful features, this project stands as a solution for:
 
-First, run the development server:
+Discovering relevant scholarships with ease.
+Filtering opportunities based on location, education level, and eligibility criteria.
+Tracking real-time application progress for better management.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔑 Key Highlights
+Dynamic Search & Filters: Find the perfect scholarships tailored to your needs.
+Real-Time Updates: Stay informed about deadlines and statuses at all times.
+Scalability: Engineered to serve students in urban and rural areas, even with limited internet access.
+Clean and Modular Code: Built using Next.js 13, ensuring high performance and flexibility.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🌟 Our Mission
+We believe education is a right, not a privilege. By simplifying the process of finding and applying for scholarships, this platform bridges the gap between students and opportunities.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+📌 Why This Project Stands Out
+This project isn't just a demo; it's a vision to enable every student to achieve their dreams through education, regardless of their financial background. We’ve focused on usability, inclusivity, and technological innovation to make a real impact.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+💻 Technologies Used
+Frontend: Next.js 13, Tailwind CSS
+Backend: Node.js
+Database: firebase
 
-## Learn More
+"Every feature has been crafted with a student’s journey in mind, ensuring a seamless experience from discovery to application."
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+BY Team DuoDevs (Mohd Abdullah and Daniya Fatima)
